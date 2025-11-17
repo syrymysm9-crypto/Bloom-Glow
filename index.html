@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bloom & Glow</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">🌸 Bloom & Glow</div>
+
+    <nav>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="text-box">
+        <h1>Nurture Your Skin</h1>
+        <p>Discover the best skincare products for your skin type.</p>
+        <a href="#products" class="btn">Shop Now</a>
+    </div>
+    <div class="hero-img">
+        <img src="assets/hero.jpg" alt="Skincare products">
+    </div>
+</section>
+
+<section id="products" class="products">
+    <h2>Featured Products</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="assets/hero.jpg">
+            <h3>Hydrating Face Cream</h3>
+            <p class="price">SAR 82</p>
+            <button onclick="addToCart('Hydrating Face Cream', 82)">Add to cart</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/hero.jpg">
+            <h3>Vitamin C Serum</h3>
+            <p class="price">SAR 135</p>
+            <button onclick="addToCart('Vitamin C Serum', 135)">Add to cart</button>
+        </div>
+
+        <div class="card">
+            <img src="assets/hero.jpg">
+            <h3>Gentle Cleanser</h3>
+            <p class="price">SAR 98</p>
+            <button onclick="addToCart('Gentle Cleanser', 98)">Add to cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: bloomandglowbeauty@gmail.com</p>
+    <p>Instagram: @bloomandglow.beauty</p>
+</section>
+
+<footer>
+    <p>© 2025 Bloom & Glow — All rights reserved.</p>
+</footer>
+
+<div id="cart" class="cart-panel">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+
+    <p class="total">Total: <span id="total-price">SAR 0</span></p>
+
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    <button class="close-btn" onclick="toggleCart()">Close</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
